@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<?import javafx.scene.control.*?> 
+<?import javafx.scene.layout.*?> 
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.cwk.ui.controllers.InventoryController"> 
+    <children> 
+        <Label layoutX="20" layoutY="20" text="Inventory" /> 
+            <TableView fx:id="productTable" layoutX="20" layoutY="50" prefWidth="850" prefHeight="400">
+                <columns>
+                    <TableColumn fx:id="idCol" text="ID" prefWidth="50"/>
+                    <TableColumn fx:id="nameCol" text="Name" prefWidth="200"/>
+                    <TableColumn fx:id="categoryCol" text="Category" prefWidth="150"/>
+                    <TableColumn fx:id="priceCol" text="Price" prefWidth="100"/>
+                    <TableColumn fx:id="gstCol" text="GST" prefWidth="100"/>
+                    <TableColumn fx:id="stockCol" text="Stock" prefWidth="100"/>
+                </columns>
+            </TableView>
+
+        <Button layoutX="20" layoutY="470" text="Add Sample Product" onAction="#addSampleProduct" /> 
+        <Button layoutX="160" layoutY="470" text="Back" onAction="#goBack" /> 
+    </children> 
+</AnchorPane>

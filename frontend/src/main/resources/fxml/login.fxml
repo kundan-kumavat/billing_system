@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.cwk.ui.controllers.LoginController">
+    <children>
+        <Label layoutX="260" layoutY="30" text="Billing Software - Login" />
+        <TextField fx:id="username" layoutX="200" layoutY="80" promptText="Username" />
+        <PasswordField fx:id="password" layoutX="200" layoutY="120" promptText="Password" />
+        <Button layoutX="260" layoutY="170" text="Login" onAction="#handleLogin" />
+    </children>
+</AnchorPane>

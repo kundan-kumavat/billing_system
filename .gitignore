@@ -1,0 +1,126 @@
+# ============================================
+# 🧠 General
+# ============================================
+*.log
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+*.class
+*.iml
+*.ipr
+*.iws
+*.orig
+*.rej
+*.idea/
+*.vscode/
+*.project
+*.classpath
+*.factorypath
+*.settings/
+target/
+bin/
+build/
+out/
+dist/
+
+# ============================================
+# ☕ Java / Maven / Gradle
+# ============================================
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+.gradle/
+gradle-app.setting
+
+# ============================================
+# ⚙️ JavaFX (Frontend)
+# ============================================
+# JavaFX build/output
+out/
+build/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+
+# IntelliJ / Eclipse workspace files
+.idea/
+*.iws
+*.iml
+*.ipr
+.classpath
+.project
+.settings/
+
+# ============================================
+# 🌐 Node.js / Web Frontend (if using npm/yarn)
+# ============================================
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+pnpm-lock.yaml
+dist/
+build/
+.cache/
+coverage/
+.vscode/
+
+# ============================================
+# 🧪 Test / Coverage / Temp
+# ============================================
+test-output/
+surefire-reports/
+jacoco.exec
+coverage/
+reports/
+*.test.js
+*.test.ts
+*.test.jsx
+*.test.tsx
+
+# ============================================
+# 🔒 OS / Editor junk files
+# ============================================
+Thumbs.db
+.DS_Store
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.swp
+*.swo
+*.tmp
+
+# ============================================
+# 🧰 Logs & Environment Files
+# ============================================
+logs/
+*.log
+*.env
+.env.*
+!.env.example
+
+# ============================================
+# 🗃️ Database & Generated Data
+# ============================================
+*.db
+*.sqlite
+*.mv.db
+*.h2.db
+*.db-journal
+*.sql
+*.json
+*.csv

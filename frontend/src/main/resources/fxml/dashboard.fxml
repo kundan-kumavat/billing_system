@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.cwk.ui.controllers.DashboardController">
+    <top>
+        <MenuBar>
+            <Menu text="Modules">
+                <MenuItem text="Inventory" onAction="#openInventory"/>
+                <MenuItem text="Billing" onAction="#openBilling"/>
+                <MenuItem text="Reports" onAction="#openReports"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <AnchorPane fx:id="mainContent" prefWidth="800" prefHeight="600">
+            <Label layoutX="20" layoutY="20" text="Welcome to Billing Software POC" />
+        </AnchorPane>
+    </center>
+</BorderPane>
