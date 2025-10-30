@@ -15,7 +15,7 @@ public class DashboardController {
 
     @FXML
     private void openBilling(ActionEvent event) {
-        loadModule("/fxml/billing.fxml");
+        loadModule("/fxml/invoice-view.fxml");
     }
 
     @FXML

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.cwk.ui.controllers.InvoiceController">
+
+    <top>
+        <Label text="🧾 Billing Software - Invoices"
+               style="-fx-font-size:20px; -fx-padding:10px;"/>
+    </top>
+
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15" />
+            </padding>
+
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Saved Invoices:" style="-fx-font-size: 16px;"/>
+                <Button text="🔄 Refresh" onAction="#initialize"/>
+            </HBox>
+
+            <TableView fx:id="invoiceTable" prefHeight="200">
+                <columns>
+                    <TableColumn fx:id="colName" text="Recipient" prefWidth="150"/>
+                    <TableColumn fx:id="colEmail" text="Email" prefWidth="150"/>
+                    <TableColumn fx:id="colTotal" text="Total Cost" prefWidth="100"/>
+                    <TableColumn fx:id="colTax" text="Tax" prefWidth="80"/>
+                    <TableColumn fx:id="colFinal" text="Final Cost" prefWidth="100"/>
+                </columns>
+            </TableView>
+
+            <Separator/>
+
+            <GridPane hgap="10" vgap="10">
+                <columnConstraints>
+                    <ColumnConstraints halignment="RIGHT"/>
+                    <ColumnConstraints hgrow="ALWAYS"/>
+                </columnConstraints>
+
+                <Label text="Recipient Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="recipientNameField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Email:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="emailField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Address:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="addressField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Contact:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="contactNoField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                <Label text="Tax (%) :" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <TextField fx:id="taxField" promptText="Enter GST %" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+            </GridPane>
+
+            <Label text="Products List:" style="-fx-font-size: 16px; -fx-padding:5px;"/>
+
+            <TableView fx:id="productTable" prefHeight="150">
+                <columns>
+                    <TableColumn fx:id="productColumn" text="Product" prefWidth="150"/>
+                    <TableColumn fx:id="quantityColumn" text="Qty" prefWidth="70"/>
+                    <TableColumn fx:id="priceColumn" text="Unit Price" prefWidth="90"/>
+                    <TableColumn fx:id="totalColumn" text="Total" prefWidth="100"/>
+                </columns>
+            </TableView>
+
+            <HBox spacing="10">
+                <TextField fx:id="productNameField" promptText="Product Name"/>
+                <TextField fx:id="quantityField" promptText="Quantity"/>
+                <TextField fx:id="priceField" promptText="Unit Price"/>
+                <Button text="Add Item" onAction="#addProductToList"/>
+            </HBox>
+
+            <Label fx:id="totalLabel" text="Subtotal: ₹0.00" style="-fx-font-size:14px;"/>
+            <Label fx:id="taxLabel" text="Tax: ₹0.00" style="-fx-font-size:14px;"/>
+            <Label fx:id="grandTotalLabel" text="Grand Total: ₹0.00"
+                   style="-fx-font-size:16px; -fx-font-weight:bold;"/>
+
+            <Button text="💾 Save Invoice" onAction="#saveInvoice"
+                    style="-fx-padding:10px; -fx-background-color:#1E90FF; -fx-text-fill:white;"/>
+        </VBox>
+    </center>
+</BorderPane>
